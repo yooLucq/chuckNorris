@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris</title>
+    <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+
+
+    <div class="jokeSection" id="jokeSection">
+        <h2 class="title">Chuck Norris</h2>
+        
+        <img src="static/css/image-removebg-preview.png" alt="Chuck Norris"> 
+        <br>
+        <br>
+        <br>
+
+        <label for="category">Seleziona una categoria:</label>
+        <br>
+        <div class="inputHandle">
+
+            <div class="select">
+                <select id="category">
+
+                    <option value="">Nessuna categoria</option>
+                    <option value="animal">Animali</option>
+                    <option value="career">Carriera</option>
+                    <option value="celebrity">Celebrità</option>
+                    <option value="dev">Sviluppatori</option>
+                    <option value="explicit">Espliciti</option>
+                    <option value="fashion">Moda</option>
+                    <option value="food">Cibo</option>
+                    <option value="history">Storia</option>
+                    <option value="money">Denaro</option>
+                    <option value="movie">Film</option>
+                    <option value="music">Musica</option>
+                    <option value="science">Scienza</option>
+                    <option value="sport">Sport</option>
+                    <option value="travel">Viaggi</option>
+                
+                </select>
+            </div>
+
+            <div class="send">
+                <button id="loadJoke">Carica Joke</button>
+            </div>
+        </div>
+
+        <div id="joke"></div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>

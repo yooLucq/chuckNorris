@@ -1,10 +1,22 @@
 body{
     font-family: Arial, sans-serif;
+    background-color: #F5E1C8;
     text-align: center;
     margin: 20px;
 }
 
-select, button{
+select{
+    border-radius: 4px;
+    border: 1px solid whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button{
+    border-radius: 4px;
+    border: 1px solid whitesmoke;
+    background-color: #A7C7E7;
     margin: 10px;
     padding: 10px;
     font-size: 16px;
@@ -13,5 +25,16 @@ select, button{
 #joke{
     margin-top: 20px;
     font-size: 18px;
+    padding: 20px;
+    font-weight: bold;
+    border: 1px solid gray;
+    background-color: #A8B5A2;
+    display: inline-block;
+}
+
+.title{
+    font-size: 50px;
+    text-align: center;
+    color: #D28E6A;
     font-weight: bold;
 }
