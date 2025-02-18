@@ -1,0 +1,17 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+select, button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#joke{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

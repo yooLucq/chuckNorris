@@ -1,32 +1,20 @@
-let btn = document.querySelector(".hitMe")
-        let url = "https://api.chucknorris.io/jokes/random"
-        let risorsa
+document.getElementById('loadJoke').addEventListener('click', function() {
+    const category = document.getElementById('category').value;
+    const url = category ? `https://api.chucknorris.io/jokes/random?category=${category}` : 'https://api.chucknorris.io/jokes/random';
 
-
-        btn.addEventListener("click", function (e) {
-            e.preventDefault()
-
-            risorsa = fetch(url).then(
-                function (resp) {
-                    console.log(risorsa)
-                    console.log(resp)
-
-                    return resp.json()
-                }
-            ).then(
-                function (data) {
-                    console.log(data.value)
-                }
-            ).catch(
-                function (err) {
-                    console.log(err)
-                }
-            )
-
-            console.log(risorsa)
-            // stati delle promises: 
-            // 1. stato pending
-            // 2. stato rejected
-            // 3. stato fulfilled
-
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Errore nella richiesta: ' + response.statusText);
+            }
+            return response.json();
         })
+        .then(data => {
+            document.getElementById('joke').innerText = data.value;
+            console.log(data)
+        })
+        .catch(error => {
+            document.getElementById('joke').innerText = 'Si è verificato un errore: ' + error.message;
+            console.log(error.message)
+        });
+});
